@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>css的选择器</title>
+		<!--css的选择器
+			标签选择器：
+				标签名{样式名1：样式值1；......}
+				作用：会将当前网页内的所有该标签增加相同的样式
+		-->
+		<style type="text/css">
+			/*标签选择器*/
+			table{
+				width: 300px;
+				height: 200px;
+				border: solid 1px;
+				background-color: red;
+				/*color: red;*/
+			}
+			/*id选择器  给某一个设置样式*/
+			#t1{
+				background-color: gray;
+			}
+			/*b{
+				color: red;
+			}*/
+			/*类选择器  给不同的标签添加相同的样式*/
+			.commo{
+				color: red;
+			}
+			/*全部选择选择器  选择所有的html标签，并添加相同的样式*/
+			/**{
+				样式名1:样式值1;
+			}*/
+/*-----------------------------------------------------------------------------*/
+			/*组合选择器 解决不同的选择器之间重复样式的问题*/
+			.commo,table{
+				background-color: blue
+			}
+			/*子标签选择器  选择器1 子标签选择器{}*/
+			ul li a{
+				color: red;
+			}
+			#p1 a{
+				color: yellow;
+			}
+			/*属性选择器 标签名[属性名=属性值]{}*/
+			input[type=text]{
+				background-color: green;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>css的选择器学习</h3>
+		<hr />
+		<hr />
+		<table id="t1" class="commo">
+			<tr>
+				<td>小小</td>
+				<td>小小</td>
+				<td>小小</td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td>8</td>
+				<td>8</td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td>8</td>
+				<td>8</td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		<b class="commo">css简单</b>
+		<hr />
+		<ul>
+			<li><a href="">哈哈</a></li>
+			<li><a href="">嘻嘻</a></li>
+			<li><a href="">呵呵</a></li>
+		</ul>
+		<ul>
+			<li><a href="">哈哈</a></li>
+			<li><a href="">嘻嘻</a></li>
+			<li><a href="">呵呵</a></li>
+		</ul>
+		<p id="p1">
+			<a href="">哈哈</a>
+		</p>
+		<p>
+			<a href="">哈哈</a>
+		</p>
+		<a href="">嘿嘿</a>
+		<hr />
+		<input type="text" name="" id="" value=""/><br />
+		<input type="password" name="" id="" value=""/>
+	</body>
+</html>
